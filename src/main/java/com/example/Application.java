@@ -10,7 +10,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.server.SecurityWebFilterChain;
-import org.springframework.security.web.server.context.NoOpServerSecurityContextRepository;
 import org.springframework.web.reactive.config.EnableWebFlux;
 import reactor.core.publisher.Mono;
 
@@ -36,7 +35,6 @@ public class Application {
 					.formLogin().disable()
 					.logout().disable()
 					.headers().disable()
-					.securityContextRepository(NoOpServerSecurityContextRepository.getInstance())
 					.authorizeExchange()
 					.anyExchange()
 					.authenticated().and()
@@ -48,7 +46,7 @@ public class Application {
 		public ReactiveUserDetailsService userDetailsService() {
 			return s -> Mono.just(new UserDetails() {
 				public Collection<? extends GrantedAuthority> getAuthorities() {
-					return Collections.EMPTY_LIST;
+					return Collections.emptySet();
 				}
 
 				public String getPassword() {
