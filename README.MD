@@ -68,7 +68,7 @@ Responses that do not match the expected result are written to
 > be written to ../results/failedRequest.* - relative to jmeter's working
 > directory.
 
-The test is aborted, when a wrong response is detected.
+The test aborts when a wrong response is detected.
 
 # How to run the test
 
@@ -80,7 +80,7 @@ The build succeeds
 
 ## Result reproducing the error described above
 
-The build will fail with a message like 
+The build fails with a message like 
 `Failing build because failed requests have been detected.  JMeter logs are available at: 'target/jmeter/logs'`
 
 # Behavior on my machine
