@@ -1,3 +1,7 @@
+# Error reported in spring issue tracker
+
+https://jira.spring.io/browse/SPR-17193
+
 # Spring webflux test application
 
 When running a simple spring-boot app using webflux on netty, I experienced
