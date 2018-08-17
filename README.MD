@@ -91,6 +91,7 @@ above, usually after a few seconds.
 My box:
 
    * Ubuntu 17.10
+   * Hardware: i7 6700T, 16GB RAM
    * Java:
 
    ```
@@ -102,7 +103,9 @@ My box:
    
    I also tried OpenJDK and IBM java, with same results.
 
-   * Hardware: i7 6700T, 16GB RAM
+## Tests on other boxes
+
+I've been able to reproduce the error using this test application on Windows 10 (IBM JDK 8) and Mac OS X (Oracle Java 8).
 
 # Other things I tried
 
